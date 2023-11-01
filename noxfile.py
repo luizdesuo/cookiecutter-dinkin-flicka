@@ -57,15 +57,3 @@ def docs(session: nox.Session) -> None:
     else:
         sphinx_args = ["-W", ".", str(build_dir)]
         session.run("sphinx-build", *sphinx_args)
-
-@nox.session
-def presentation(session: nox.Session) -> None:
-    with open(Path("presentation/requirements.txt")) as f:
-        requirements = f.read().splitlines()
-    session.install(".")
-    session.install(*requirements)
-    session.chdir("presentation")
-    session.run("rm", "-rf", "_build/", external=True)
-    build_dir = Path("presentation", "_build", "html")
-    sphinx_args = ["-b", "dirrevealjs", ".", str(build_dir)]
-    session.run("sphinx-build", *sphinx_args)
