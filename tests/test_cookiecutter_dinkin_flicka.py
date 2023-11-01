@@ -1,0 +1,1 @@
+from cookiecutter_dinkin_flicka import cookiecutter_dinkin_flicka

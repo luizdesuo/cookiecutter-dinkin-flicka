@@ -1,0 +1,33 @@
+{
+  "project_name": "dinkin-flicka",
+  "__package_slug": "{{- cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') -}}",
+  "friendly_name": "{{- cookiecutter.project_name.replace('-', ' ').title() -}}",
+  "package_short_description": "C'est la vie",
+  "python_version": "3.11",
+  "package_version": "0.0.0",
+  "copyright_year": "{% now 'utc', '%Y' %}",
+  "author": "someone",
+  "email": "someone@something.stuff",
+  "github_user": "someone",
+  "license": [
+    "MIT",
+    "Apache License 2.0",
+    "GNU General Public License v3.0",
+    "BSD 3-Clause",
+    "Proprietary",
+    "None"
+  ],
+  "development_status": [
+    "Development Status :: 1 - Planning",
+    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 6 - Mature",
+    "Development Status :: 7 - Inactive",
+    "None"
+  ],
+  "data_version_control": [false, true],
+  "defensive_programming": [false, true],
+  "publish": [false, true]
+}

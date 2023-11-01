@@ -1,0 +1,118 @@
+[tool.poetry]
+name = "{{cookiecutter.project_name}}"
+version = "{{cookiecutter.package_version}}"
+description = "{{cookiecutter.friendly_name}}: {{cookiecutter.package_short_description}}"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+license = "{{cookiecutter.license}}"
+readme = "README.md"
+homepage = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+repository = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+{% if cookiecutter.__package_slug != cookiecutter.project_name.replace('-', '_') -%}
+packages = [
+    { include = "{{cookiecutter.__package_slug}}", from = "src" },
+]
+{% endif -%}
+{% if cookiecutter.development_status != 'None' -%}
+classifiers = [
+    "{{cookiecutter.development_status}}",
+]
+{% endif -%}
+
+[tool.poetry.urls]
+Changelog = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases"
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+click = ">=8.1.7"
+{% if cookiecutter.data_version_control -%}
+dvc = ">=3.27.0"
+pandas = ">=2.1.1"
+pyjanitor = ">=0.26.0"
+{% endif -%}
+{% if cookiecutter.defensive_programming -%}
+icontract = ">=2.6.4"
+{% endif -%}
+
+[tool.poetry.group.dev.dependencies]
+python-semantic-release = ">=8.3.0"
+pre-commit = ">=3.5.0"
+nox = ">=2023.4.22"
+
+[tool.poetry.group.test.dependencies]
+{% if cookiecutter.data_version_control -%}
+pandera = ">=0.17.2"
+{% endif -%}
+{% if cookiecutter.defensive_programming -%}
+hypothesis = ">=6.88.1"
+icontract-hypothesis = ">=1.1.7"
+{% endif -%}
+pytest = ">=7.4.3"
+pytest-cov = ">=4.1.0"
+safety = ">=2.3.5"
+typeguard = ">=4.1.5"
+xdoctest = {extras = ["colors"], version = ">=1.1.2"}
+pygments = ">=2.16.1"
+
+[tool.poetry.group.docs.dependencies]
+jupyter = ">=1.0.0"
+myst-parser = ">=2.0.0"
+sphinx-autobuild = ">=2021.3.14"
+sphinx-autoapi = ">=3.0.0"
+sphinx-copybutton = ">=0.5.2"
+furo = ">=2023.9.10"
+sphinx-click = ">=5.0.1"
+sphinx = ">=7.2.6"
+sphinx-mermaid = ">=0.0.8"
+
+[tool.poetry.scripts]
+{{cookiecutter.project_name}} = "{{cookiecutter.__package_slug}}.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["{{cookiecutter.__package_slug}}", "tests"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.pycln]
+all = true
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_context = true
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+lines_after_imports = 2
+
+[tool.black]
+line-length = 88
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version" # version location
+branch = "main"                             # branch to make releases of
+changelog_file = "CHANGELOG.md"             # changelog file
+build_command = "poetry build"              # build dists
+dist_path = "dist/"                         # where to put dists
+upload_to_release = true                    # auto-create GitHub release
+upload_to_pypi = false                      # don't auto-upload to PyPI
+remove_dist = false                         # don't remove dists
+patch_without_tag = true                    # patch release by default
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
