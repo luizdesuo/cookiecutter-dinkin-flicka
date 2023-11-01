@@ -169,7 +169,6 @@ git commit -m "build: update pre-commit hooks versions"
 
 TODO
 
-Please, check the [slides].
 
 ## Contributing
 
@@ -203,7 +202,6 @@ This project was generated from [Dinkin Flicka Cookiecutter] template.
 [icontract]: https://icontract.readthedocs.io/en/latest/
 [hypothesis]: https://hypothesis.works/
 [icontract-hypothesis]: https://github.com/mristin/icontract-hypothesis
-[slides]: https://luizdesuo.github.io/cookiecutter-dinkin-flicka/
 
 
 <!-- github-only -->
