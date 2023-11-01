@@ -37,9 +37,6 @@ jobs:
       - name: Build documentation
         run: poetry run nox -s docs
 
-      - name: Build pesentation
-        run: poetry run nox -s presentation
-
   cd:
     # Only run this job if the "ci" job passes
     needs: ci
