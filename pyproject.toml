@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-dinkin-flicka"
-version = "0.0.1"
+version = "0.0.2"
 description = "Dinkin Flicka: a versatile cookiecutter template for python projects"
 authors = ["Luiz Desuó N. <luizdesuo@gmail.com>"]
 license = "MIT"
