@@ -22,7 +22,7 @@ extensions = [
     "sphinx_click",
     "myst_parser",
     "sphinx_copybutton",
-    "sphinxmermaid",
+    "sphinxcontrib.mermaid",
 ]
 
 autoapi_dirs = ["../src"]
@@ -48,3 +48,6 @@ autoapi_options = [
 # a list of builtin themes.
 #
 html_theme = "furo"
+html_js_files = [
+   'js/mermaid.js',
+]

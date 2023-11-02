@@ -4,4 +4,4 @@ sphinx-click
 myst_parser
 sphinx-copybutton
 sphinx-autoapi
-sphinx-mermaid
+sphinxcontrib-mermaid

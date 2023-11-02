@@ -3,4 +3,4 @@ sphinx
 sphinx-click
 myst_parser
 sphinx-copybutton
-sphinx-mermaid
+sphinxcontrib-mermaid
