@@ -165,6 +165,31 @@ And, commit:
 git commit -m "build: update pre-commit hooks versions"
 ```
 
+### Automatic release
+
+Setting on github:
+
+```{mermaid}
+
+    graph LR
+        A[Settings] --> B[Actions]
+        B --> C[General]
+        C --> D[Workflow<br>permissions]
+        D --> E[Read and write<br>permissions]
+        E --> F[Save]
+```
+
+The [python-semantic-release] tool do the automated bumping based on the [angular commit style]
+
+* **build/chore**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **test**: Adding missing tests or correcting existing tests
+
 ## Features
 
 TODO
@@ -202,7 +227,8 @@ This project was generated from [Dinkin Flicka Cookiecutter] template.
 [icontract]: https://icontract.readthedocs.io/en/latest/
 [hypothesis]: https://hypothesis.works/
 [icontract-hypothesis]: https://github.com/mristin/icontract-hypothesis
-
+[python-semantic-release]: https://python-semantic-release.readthedocs.io/en/latest/
+[Angular commit style]: https://github.com/angular/angular/blob/main/CONTRIBUTING.md
 
 <!-- github-only -->
 
