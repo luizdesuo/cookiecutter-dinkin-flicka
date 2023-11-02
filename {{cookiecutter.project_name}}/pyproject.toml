@@ -34,7 +34,7 @@ icontract = ">=2.6.4"
 {% endif -%}
 
 [tool.poetry.group.dev.dependencies]
-python-semantic-release = ">=8.3.0"
+python-semantic-release = "^7.33.2"
 pre-commit = ">=3.5.0"
 nox = ">=2023.4.22"
 
@@ -103,15 +103,15 @@ lines_after_imports = 2
 line-length = 88
 
 [tool.semantic_release]
-version_toml = ["pyproject.toml:tool.poetry.version"]   # version location
-branch = "main"                                         # branch to make releases of
-changelog_file = "CHANGELOG.md"                         # changelog file
-build_command = "pip install poetry && poetry build"    # build dists
-dist_path = "dist/"                                     # where to put dists
-upload_to_release = true                                # auto-create GitHub release
-upload_to_pypi = false                                  # don't auto-upload to PyPI
-remove_dist = false                                     # don't remove dists
-patch_without_tag = true                                # patch release by default
+version_variable = "pyproject.toml:version" # version location
+branch = "main"                             # branch to make releases of
+changelog_file = "CHANGELOG.md"             # changelog file
+build_command = "poetry build"              # build dists
+dist_path = "dist/"                         # where to put dists
+upload_to_release = true                    # auto-create GitHub release
+upload_to_pypi = false                      # don't auto-upload to PyPI
+remove_dist = false                         # don't remove dists
+patch_without_tag = true                    # patch release by default
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
