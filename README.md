@@ -271,6 +271,11 @@ please [file an issue] along with a detailed description.
 
 This project was generated from [Dinkin Flicka Cookiecutter] template.
 
+## Acknowledgements
+
+[Dinkin Flicka Cookiecutter] was based on [Hypermodern Python] article series
+and [Python Packages book].
+
 [pypi]: https://pypi.org/
 [dinkin flicka cookiecutter]: https://github.com/luizdesuo/cookiecutter-dinkin-flicka
 [file an issue]: https://github.com/luizdesuo/cookiecutter-dinkin-flicka/issues
@@ -286,6 +291,8 @@ This project was generated from [Dinkin Flicka Cookiecutter] template.
 [icontract-hypothesis]: https://github.com/mristin/icontract-hypothesis
 [python-semantic-release]: https://python-semantic-release.readthedocs.io/en/latest/
 [Angular commit style]: https://github.com/angular/angular/blob/main/CONTRIBUTING.md
+[Hypermodern Python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
+[Python Packages book]:https://py-pkgs.org
 
 <!-- github-only -->
 
