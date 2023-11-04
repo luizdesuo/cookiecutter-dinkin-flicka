@@ -192,8 +192,65 @@ The [python-semantic-release] tool do the automated bumping based on the [angula
 
 ## Features
 
-TODO
-
+* pre-commit hooks:
+    * bandit
+    * darglint
+    * pycln
+    * check-added-large-files
+    * check-ast
+    * check-byte-order-marker
+    * check-builtin-literals
+    * check-case-conflict
+    * check-docstring-first
+    * check-json
+    * check-merge-conflict
+    * check-symlinks
+    * check-toml
+    * check-vcs-permalinks
+    * check-xml
+    * check-yaml
+    * debug-statements
+    * destroyed-symlinks
+    * detect-private-key
+    * end-of-file-fixer
+    * file-contents-sorter
+    * fix-byte-order-marker
+    * fix-encoding-pragma
+    * forbid-new-submodules
+    * mixed-line-ending
+    * requirements-txt-fixer
+    * sort-simple-yaml
+    * trailing-whitespace
+    * prettier
+    * pyupgrade
+    * isort
+    * docformatter
+    * black
+    * blacken-docs
+    * flake8
+        * flake8-bugbear
+        * flake8-docstrings
+        * flake8-rst-docstrings
+        * pep8-naming
+    * mypy
+* click
+* python-semantic-release
+* nox
+* pytest
+* pytest-cov
+* safety
+* typeguard
+* xdoctest
+* pygments
+* jupyter
+* myst-parser
+* sphinx-autobuild
+* sphinx-autoapi
+* sphinx-copybutton
+* furo
+* sphinx-click
+* sphinx
+* sphinxcontrib-mermaid
 
 ## Contributing
 
