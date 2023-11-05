@@ -1,8 +1,10 @@
 # Contributor Guide
 
 Thank you for your interest in improving this project.
+{% if cookiecutter.license != 'None' -%}
 This project is open-source under the [{{cookiecutter.license.replace("-", " ")}} license] and
 welcomes contributions in the form of bug reports, feature requests, and pull requests.
+{% endif -%}
 
 Here is a list of important resources for contributors:
 
@@ -11,7 +13,9 @@ Here is a list of important resources for contributors:
 - [Issue Tracker]
 - [Code of Conduct]
 
+{% if cookiecutter.license != 'None' -%}
 [{{cookiecutter.license.replace("-", " ").lower()}} license]: https://opensource.org/licenses/{{cookiecutter.license}}
+{% endif -%}
 [source code]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 {% if cookiecutter.publish -%}
 [documentation]: https://{{cookiecutter.project_name}}.readthedocs.io/

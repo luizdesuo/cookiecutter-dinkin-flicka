@@ -4,7 +4,9 @@ end-before: <!-- github-only -->
 ---
 ```
 
+{% if cookiecutter.license != 'None' -%}
 [license]: license
+{% endif -%}
 [contributor guide]: contributing
 [command-line reference]: usage
 
@@ -18,6 +20,8 @@ usage
 autoapi/index
 contributing
 Code of Conduct <codeofconduct>
+{% if cookiecutter.license != 'None' -%}
 License <license>
+{% endif -%}
 Changelog <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases>
 ```

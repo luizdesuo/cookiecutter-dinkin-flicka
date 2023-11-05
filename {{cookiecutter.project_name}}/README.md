@@ -60,10 +60,12 @@ Please see the [Command-line Reference] for details.
 Contributions are very welcome.
 To learn more, see the [Contributor Guide].
 
+{% if cookiecutter.license != 'None' -%}
 ## License
 
 Distributed under the terms of the [{{cookiecutter.license.replace("-", " ")}} license][license],
 _{{cookiecutter.friendly_name}}_ is free and open source software.
+{% endif -%}
 
 ## Issues
 
@@ -81,7 +83,9 @@ This project was generated from [Dinkin Flicka Cookiecutter] template.
 
 <!-- github-only -->
 
+{% if cookiecutter.license != 'None' -%}
 [license]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/blob/main/LICENSE
+{% endif -%}
 [contributor guide]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/blob/main/CONTRIBUTING.md
 {% if cookiecutter.publish -%}
 [command-line reference]: https://{{cookiecutter.project_name}}.readthedocs.io/en/latest/usage.html
