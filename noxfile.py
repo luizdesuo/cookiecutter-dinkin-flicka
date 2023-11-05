@@ -32,7 +32,7 @@ def typeguard(session: nox.Session) -> None:
 def tests(session: nox.Session) -> None:
     """Run the test and xdoctest suites."""
     session.install(".")
-    session.install("pytest", "pygments", "pytest-cov", "xdoctest")
+    session.install("pytest", "pygments", "pytest-cov", "xdoctest", "pytest-cookies")
     session.run("pytest",
                 "tests",
                 "--cov=cookiecutter_dinkin_flicka",
