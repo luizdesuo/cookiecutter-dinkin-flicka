@@ -10,6 +10,10 @@ repository = "https://github.com/luizdesuo/cookiecutter-dinkin-flicka"
 [tool.poetry.urls]
 Changelog = "https://github.com/luizdesuo/cookiecutter-dinkin-flicka/releases"
 
+classifiers = [
+    "Development Status :: 3 - Alpha",
+]
+
 [tool.poetry.dependencies]
 python = "^3.11"
 click = ">=8.1.7"
