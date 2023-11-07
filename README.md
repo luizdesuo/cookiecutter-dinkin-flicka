@@ -127,10 +127,10 @@ The project structure will look similar to that shown below:
         └── test_project_name.py
 ```
 
-Then, install the project with:
+After changing directory to project-name folder, install the project with:
 
 ```bash
-poetry install project-name
+poetry install
 ```
 
 Start version control tracking:
