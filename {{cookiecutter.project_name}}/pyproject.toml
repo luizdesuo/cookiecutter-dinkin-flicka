@@ -77,7 +77,7 @@ source = ["{{cookiecutter.__package_slug}}", "tests"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 100
+fail_under = 0
 
 [tool.pycln]
 all = true

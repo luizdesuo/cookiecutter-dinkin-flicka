@@ -37,7 +37,6 @@ def tests(session: nox.Session) -> None:
                 "tests",
                 "--cov=cookiecutter_dinkin_flicka",
                 "--cov-report=xml",
-                "--cov-fail-under=0",
                 "--xdoctest",
                 *session.posargs)
 

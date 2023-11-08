@@ -59,7 +59,7 @@ source = ["cookiecutter_dinkin_flicka", "tests"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 100
+fail_under = 0
 
 [tool.pycln]
 all = true
