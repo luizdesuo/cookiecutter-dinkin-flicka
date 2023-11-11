@@ -17,22 +17,19 @@ nox.options.sessions = (
 @nox.session(python=_python_versions)
 def safety(session: nox.Session) -> None:
     """Scan dependencies for insecure packages."""
-    session.install(".[dev]")
-    session.install("safety")
+    session.install(".[test]")
     session.run("safety", "check", "--full-report")
 
 @nox.session(python=_python_versions)
 def typeguard(session: nox.Session) -> None:
     """Runtime type checking using Typeguard."""
-    session.install(".")
-    session.install("pytest", "typeguard", "pygments")
+    session.install(".[test]")
     session.run("pytest", f"--typeguard-_packages={_package}", *session.posargs)
 
 @nox.session(python=_python_versions)
 def tests(session: nox.Session) -> None:
     """Run the test and xdoctest suites."""
-    session.install(".")
-    session.install("pytest", "pygments", "pytest-cov", "xdoctest", "pytest-cookies")
+    session.install(".[test]")
     session.run("pytest",
                 "tests",
                 "--cov=cookiecutter_dinkin_flicka",
@@ -44,7 +41,7 @@ def tests(session: nox.Session) -> None:
 def docs(session: nox.Session) -> None:
     with open(Path("docs/requirements.txt")) as f:
         requirements = f.read().splitlines()
-    session.install(".")
+    session.install(".[docs]")
     session.install(*requirements)
     session.chdir("docs")
     session.run("rm", "-rf", "_build/", external=True)
