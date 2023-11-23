@@ -6,3 +6,4 @@ max-complexity = 10
 docstring-convention = numpy
 rst-roles = class,const,func,meth,mod,ref
 rst-directives = deprecated
+exclude = tests/*
