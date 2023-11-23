@@ -3,6 +3,7 @@ repos:
     rev: 'v1.7.5'
     hooks:
       - id: bandit
+        args: [--config=bandit.yml]
   - repo: https://github.com/terrencepreilly/darglint
     rev: master
     hooks:
@@ -78,7 +79,6 @@ repos:
     rev: 6.0.0
     hooks:
       - id: flake8
-        args: [--darglint-ignore-regex, .*]
         additional_dependencies:
           - flake8-bugbear
           - flake8-docstrings
