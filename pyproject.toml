@@ -65,6 +65,8 @@ fail_under = 0
 all = true
 
 [tool.mypy]
+disallow_subclassing_any = true
+ignore_missing_imports = true
 strict = true
 warn_unreachable = true
 pretty = true
