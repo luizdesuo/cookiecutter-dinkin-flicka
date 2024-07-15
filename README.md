@@ -25,7 +25,7 @@ a versatile cookiecutter template for python projects
 
 <!-- badges-end -->
 
-<p align="center"><img alt="logo" src="docs/_static/logo.png" width="25%" /></p>
+<p align="center"><img alt="logo" src="docs/_static/logo.png" width="50%" /></p>
 
 <!-- docs-only -->
 
