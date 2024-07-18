@@ -2,6 +2,8 @@
 
 a versatile cookiecutter template for python projects
 
+[![Logo](https://raw.githubusercontent.com/luizdesuo/cookiecutter-dinkin-flicka/main/docs/_static/logo.png)](https://github.com/luizdesuo/cookiecutter-dinkin-flicka)
+
 <!-- badges-begin -->
 
 [![PyPI](https://img.shields.io/pypi/v/cookiecutter-dinkin-flicka.svg)][pypi status]
@@ -24,8 +26,6 @@ a versatile cookiecutter template for python projects
 [black]: https://github.com/psf/black
 
 <!-- badges-end -->
-
-<p align="center"><img alt="logo" src="docs/_static/logo.png" width="50%" /></p>
 
 <!-- docs-only -->
 
